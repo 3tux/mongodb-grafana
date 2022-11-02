@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-HEALTHCHECK CMD netstat -ltn | grep -c 3333
+HEALTHCHECK --start_period=1m --interval=1m --retries=3 CMD netstat -ltn | grep -c 3333
 
 WORKDIR /grafana-mongodb-proxy
 COPY . .
