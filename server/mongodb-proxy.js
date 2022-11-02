@@ -172,7 +172,7 @@ app.use(function(error, req, res, next)
 // Get config from server/default.json
 var serverConfig = config.get('server');
 
-app.listen(serverConfig.port);
+app.listen(serverConfig.port, serverConfig.hostname);
 
 console.log("Server is listening on port " + serverConfig.port);
 

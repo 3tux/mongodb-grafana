@@ -2,9 +2,9 @@
     "server": 
     {
       "port": 3333,
+      "hostname": "0.0.0.0",
       "logRequests": false,
       "logQueries": false,
       "logTimings": false
     }
 }
-  
